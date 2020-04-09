@@ -3,3 +3,7 @@
 DIR="$(dirname "$(readlink -f "$0")")"
 python3 "${DIR}/selfie.py" $@
 
+
+storage=${SELFIE_STORAGE:-~/Dropbox/selfies}
+today=$(date +%Y%m%d)
+convert -delay 20 ${storage}/${today}* ${storage}/${today}.gif
