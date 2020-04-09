@@ -6,4 +6,4 @@ python3 "${DIR}/selfie.py" $@
 # Create an animated gif for all images made today
 storage=${SELFIE_STORAGE:-~/Dropbox/selfies}
 today=$(date +%Y%m%d)
-convert -delay 20 ${storage}/${today}* ${storage}/${today}.gif
+convert -delay 20 ${storage}/${today}*.png ${storage}/${today}.gif
