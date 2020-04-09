@@ -5,7 +5,7 @@ bash install.sh
 
 ### Usage
 ```
-usage: selfie.py [-h] [-d DEVICE] [-o OUTPUT] [--show] [--skip-save]
+usage: selfie [-h] [-d DEVICE] [-o OUTPUT] [--show] [--skip-save]
 
 Take selfies of yourself
 
@@ -19,5 +19,13 @@ optional arguments:
 
 Example:
 ```
-python3 selfie.py --device /dev/video2 --output /media/m/XHD/selfies
+selfie --device /dev/video2 --output /media/m/XHD/selfies
+```
+
+Or, put it in your .bashrc:
+
+```
+# Take a selfie everytime I source my .bashrc.  I'll see how I age overtime. Yikes!
+$(selfie --device /dev/video2 --output $HOME/Dropbox/selfies &>/dev/null &)
+
 ```
